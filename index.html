@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yao Cedric Richard N'DRI – Software developer</title>
+<meta name="description" content="Master 2 Computer Science student at EPSI Paris, looking for a permanent position (CDI) as a software developer. Python, PHP, JavaScript, MySQL, Docker. See my projects.">
+<meta name="theme-color" content="#0F1B3D">
+<link rel="canonical" href="https://richardcedric436-dev.github.io/portfolio/">
+<link rel="alternate" hreflang="fr" href="https://richardcedric436-dev.github.io/portfolio/fr.html">
+<link rel="alternate" hreflang="en" href="https://richardcedric436-dev.github.io/portfolio/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yao Cedric Richard N'DRI – Software developer">
+<meta property="og:description" content="Master 2 Computer Science at EPSI Paris. Looking for a permanent position (CDI) as a developer.">
+<meta property="og:url" content="https://richardcedric436-dev.github.io/portfolio/">
+<meta property="og:image" content="https://richardcedric436-dev.github.io/assets/cedric.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F1B3D'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23F2762E'%3EYC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yao Cedric Richard N'DRI",
+  "jobTitle": "Software developer, looking for a permanent position",
+  "url": "https://richardcedric436-dev.github.io/portfolio/",
+  "image": "https://richardcedric436-dev.github.io/assets/cedric.jpg",
+  "email": "mailto:richardcedric436@gmail.com",
+  "telephone": "+33758674107",
+  "sameAs": ["https://github.com/richardcedric436-dev"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Pontoise", "addressCountry": "FR" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "EPSI Paris" }
+}
+</script>
+
+<style>
+  :root {
+    --ink: #0F1B3D;
+    --ink-soft: #465072;
+    --paper: #F7F8FC;
+    --white: #FFFFFF;
+    --blue: #2547D0;
+    --orange: #E8651A;
+    --orange-bright: #F2762E;
+    --line: #DDE1EE;
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+    --gutter: clamp(20px, 5vw, 56px);
+    --max: 1120px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+
+  .wrap { width: min(100% - 2 * var(--gutter), var(--max)); margin-inline: auto; }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(247, 248, 252, .92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .site-header .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; min-height: 68px;
+  }
+  .brand { font-family: var(--display); font-weight: 800; font-size: 1.125rem; text-decoration: none; letter-spacing: -.01em; }
+  .nav { display: flex; align-items: center; gap: 28px; }
+  .nav a { text-decoration: none; font-weight: 500; font-size: .975rem; color: var(--ink-soft); }
+  .nav a:hover { color: var(--ink); }
+  .nav .btn { color: var(--white); }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 46px; padding: 0 22px;
+    font: 600 1rem/1 var(--body);
+    text-decoration: none;
+    border-radius: 999px;
+    border: 2px solid var(--ink);
+    background: var(--ink); color: var(--white);
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .btn:hover { background: var(--blue); border-color: var(--blue); }
+  .btn.ghost { background: transparent; color: var(--ink); }
+  .btn.ghost:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
+  .btn.small { min-height: 40px; padding: 0 18px; font-size: .95rem; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: clamp(40px, 8vw, 96px) 0 clamp(48px, 7vw, 88px); }
+  .hero .wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+    gap: clamp(32px, 6vw, 88px);
+    align-items: center;
+  }
+  .status {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 7px 14px; margin: 0 0 24px;
+    background: var(--white); border: 1px solid var(--line); border-radius: 999px;
+    font-size: .925rem; font-weight: 600;
+  }
+  .status::before {
+    content: ""; width: 9px; height: 9px; border-radius: 50%;
+    background: #1FA971; box-shadow: 0 0 0 4px rgba(31, 169, 113, .18);
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2.3rem, 5.6vw, 4.2rem);
+    line-height: 1.04;
+    letter-spacing: -.03em;
+    margin: 0 0 24px;
+    text-wrap: balance;
+  }
+  .lead { max-width: 52ch; font-size: 1.1875rem; color: var(--ink-soft); margin: 0 0 32px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  .facts { display: grid; grid-template-columns: repeat(3, minmax(0, auto)); justify-content: start; gap: 12px 40px; margin: 44px 0 0; padding-top: 24px; border-top: 1px solid var(--line); }
+  .facts dt { font-size: .875rem; color: var(--ink-soft); }
+  .facts dd { margin: 2px 0 0; font-weight: 600; }
+
+  /* Photo */
+  .portrait { position: relative; justify-self: center; width: min(100%, 400px); }
+  .portrait img {
+    position: relative;
+    width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover;
+    border-radius: 10px;
+    border: 0;
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding: clamp(48px, 7vw, 88px) 0; }
+  .section-head { max-width: 62ch; margin-bottom: 40px; }
+  h2 {
+    font-family: var(--display); font-weight: 800;
+    font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+    line-height: 1.1; letter-spacing: -.025em; margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .section-head p { margin: 0; color: var(--ink-soft); }
+
+  .about { background: var(--white); border-block: 1px solid var(--line); }
+  .about .wrap { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(24px, 6vw, 80px); }
+  .about p { margin: 0 0 16px; max-width: 62ch; }
+  .about p:last-child { margin-bottom: 0; }
+
+  /* Projects: ruled rows, one featured */
+  .projects { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+  .project {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) 132px;
+    gap: 16px clamp(20px, 4vw, 56px);
+    align-items: start;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .project h3 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1.15; letter-spacing: -.015em; margin: 0 0 8px; }
+  .kind { display: inline-block; font-size: .875rem; font-weight: 600; color: var(--blue); }
+  .kind.live { color: var(--orange); }
+  .project p { margin: 0 0 14px; max-width: 56ch; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+  .tags li { padding: 4px 12px; font-size: .875rem; font-weight: 500; background: var(--white); border: 1px solid var(--line); border-radius: 999px; }
+  .project .btn { white-space: nowrap; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(24px, 5vw, 72px); border-top: 2px solid var(--ink); }
+  .skill { padding: 22px 0; border-bottom: 1px solid var(--line); }
+  .skill h3 { font-family: var(--display); font-weight: 700; font-size: 1.125rem; margin: 0 0 4px; }
+  .skill p.hint { margin: 0 0 12px; font-size: .95rem; color: var(--ink-soft); }
+  .skill .tags li { background: var(--paper); }
+
+  /* Education timeline: the content is a real sequence */
+  .timeline { list-style: none; margin: 0; padding: 0 0 0 28px; border-left: 3px solid var(--blue); max-width: 720px; }
+  .timeline li { position: relative; padding: 0 0 32px; }
+  .timeline li:last-child { padding-bottom: 0; }
+  .timeline li::before {
+    content: ""; position: absolute; left: -38px; top: 6px;
+    width: 17px; height: 17px; border-radius: 50%;
+    background: var(--paper); border: 3px solid var(--blue);
+  }
+  .timeline li.now::before { background: var(--orange-bright); border-color: var(--orange-bright); }
+  .timeline h3 { font-family: var(--display); font-weight: 700; font-size: 1.25rem; margin: 0 0 4px; line-height: 1.25; }
+  .timeline .when { font-size: .95rem; font-weight: 600; color: var(--ink-soft); }
+  .timeline p { margin: 6px 0 0; }
+
+  /* Contact */
+  .contact { background: var(--ink); color: var(--white); }
+  .contact .wrap { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(24px, 6vw, 80px); align-items: end; }
+  .contact h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); margin-bottom: 16px; }
+  .contact p { margin: 0; color: #C9D0E8; max-width: 52ch; }
+  .contact .actions { flex-direction: column; align-items: stretch; }
+  .contact .btn { background: var(--orange-bright); border-color: var(--orange-bright); color: var(--ink); }
+  .contact .btn:hover { background: var(--white); border-color: var(--white); }
+  .contact .btn.ghost { background: transparent; border-color: #6E7BA8; color: var(--white); }
+  .contact .btn.ghost:hover { background: var(--white); color: var(--ink); border-color: var(--white); }
+  .contact :focus-visible { outline-color: var(--orange-bright); }
+
+  footer { padding: 28px 0; font-size: .925rem; color: var(--ink-soft); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 880px) {
+    .hero .wrap, .about .wrap, .contact .wrap { grid-template-columns: 1fr; }
+    .portrait { order: -1; width: min(78%, 320px); margin-bottom: 20px; justify-self: start; }
+    .project { grid-template-columns: 1fr; }
+    .skills { grid-template-columns: 1fr; }
+    .nav a:not(.btn):not(.lang) { display: none; }
+    .brand { font-size: .95rem; line-height: 1.2; }
+    .nav .btn { white-space: nowrap; }
+    .facts { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Yao Cedric Richard N'DRI</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#projets">Projects</a>
+      <a href="#competences">Skills</a>
+      <a href="#formation">Education</a>
+      <a class="lang" href="fr.html" hreflang="fr" lang="fr" title="Lire cette page en français">Français</a>
+      <a class="btn small" href="#contact">Contact me</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="status">Open to a permanent position (CDI)</p>
+        <h1>Developer building useful applications, from database to screen.</h1>
+        <p class="lead">Master 2 Computer Science student at EPSI Paris. I'm looking for a company where I can learn on real projects and contribute from the first weeks.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:richardcedric436@gmail.com?subject=Developer%20position%20%E2%80%93%20getting%20in%20touch">Email me</a>
+          <a class="btn ghost" href="#projets">See my projects</a>
+        </div>
+        <dl class="facts">
+          <div><dt>Looking for</dt><dd>Permanent contract (CDI)</dd></div>
+          <div><dt>Education</dt><dd>Master 2, EPSI Paris</dd></div>
+          <div><dt>Location</dt><dd>Pontoise, France</dd></div>
+        </dl>
+      </div>
+
+      <div class="portrait">
+        <img src="cedric.jpg" sizes="(max-width: 880px) 320px, 400px" width="900" height="1125" alt="Portrait of Yao Cedric Richard N'DRI, wearing an orange and blue checked shirt" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+
+  <section class="about" aria-labelledby="apropos">
+    <div class="wrap">
+      <h2 id="apropos">What I want to build</h2>
+      <div>
+        <p>I like following a need from start to finish: modeling the data, writing the logic, polishing the interface, then deploying. That's what I practice in my projects, with Python, PHP and JavaScript, and MySQL or SQLite for data.</p>
+        <p>I also keep up with cybersecurity and new technologies, and I still make time for video games and esports. In my next role, I want to join a team that ships, reviews my code and trusts me with real tasks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projets" aria-labelledby="t-projets">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="t-projets">Projects</h2>
+        <p>Four projects showing how I go from a need to something that works.</p>
+      </div>
+
+      <ul class="projects">
+        <li class="project">
+          <div>
+            <span class="kind live">Personal project, in progress</span>
+            <h3>Djassa, a marketplace inspired by Côte d'Ivoire</h3>
+          </div>
+          <div>
+            <p>An online marketplace where sellers from around the world list their products and ship anywhere. I'm building it in public on GitHub, step by step.</p>
+            <ul class="tags"><li>Marketplace</li><li>Sellers and catalog</li><li>GitHub</li></ul>
+          </div>
+          <a class="btn ghost small" href="https://github.com/richardcedric436-dev/djassa" target="_blank" rel="noopener">View repository</a>
+        </li>
+
+        <li class="project">
+          <div>
+            <span class="kind">School project</span>
+            <h3>Inventory management application</h3>
+          </div>
+          <div>
+            <p>Python application with a graphical interface to track stock and generate reports.</p>
+            <ul class="tags"><li>Python</li><li>Graphical interface</li><li>Reports</li></ul>
+          </div>
+          <a class="btn ghost small" href="https://github.com/richardcedric436-dev?tab=repositories" target="_blank" rel="noopener">View code</a>
+        </li>
+
+        <li class="project">
+          <div>
+            <span class="kind">Personal project</span>
+            <h3>Personal website</h3>
+          </div>
+          <div>
+            <p>Responsive showcase website that adapts to desktop, tablet and phone screens.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </div>
+          <a class="btn ghost small" href="https://github.com/richardcedric436-dev?tab=repositories" target="_blank" rel="noopener">View code</a>
+        </li>
+
+        <li class="project">
+          <div>
+            <span class="kind">Personal project</span>
+            <h3>PC building and maintenance</h3>
+          </div>
+          <div>
+            <p>Complete assembly of a computer, then installation and setup of the operating system.</p>
+            <ul class="tags"><li>Hardware</li><li>Operating system</li><li>Maintenance</li></ul>
+          </div>
+          <span></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="competences" aria-labelledby="t-comp" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="t-comp">Skills</h2>
+        <p>The layers of an application, from what the user sees to deployment.</p>
+      </div>
+
+      <div class="skills">
+        <div class="skill">
+          <h3>Interface</h3>
+          <p class="hint">What the user sees and touches</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>WordPress</li></ul>
+        </div>
+        <div class="skill">
+          <h3>Business logic</h3>
+          <p class="hint">The rules of the application</p>
+          <ul class="tags"><li>Python</li><li>PHP</li></ul>
+        </div>
+        <div class="skill">
+          <h3>Data</h3>
+          <p class="hint">Store, analyze, present</p>
+          <ul class="tags"><li>MySQL</li><li>SQLite</li><li>Pandas</li><li>Power BI</li><li>Tableau</li></ul>
+        </div>
+        <div class="skill">
+          <h3>Deployment</h3>
+          <p class="hint">Ship and automate</p>
+          <ul class="tags"><li>Docker</li><li>Jenkins</li><li>Azure</li></ul>
+        </div>
+        <div class="skill">
+          <h3>Tools and systems</h3>
+          <p class="hint">Everyday work</p>
+          <ul class="tags"><li>Git and GitHub</li><li>VS Code</li><li>Linux</li><li>Cisco Packet Tracer</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="formation" aria-labelledby="t-form" class="about" style="border-bottom:0">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0">
+        <h2 id="t-form">Education</h2>
+        <p>A development-focused program at EPSI Paris.</p>
+      </div>
+      <ol class="timeline">
+        <li class="now">
+          <span class="when">Since September 2026</span>
+          <h3>Master 2, Expert in Computer Science and Information Systems, Developer track</h3>
+          <p>EPSI Paris. In progress.</p>
+        </li>
+        <li>
+          <span class="when">2025 – 2026</span>
+          <h3>Master 1, Expert in Computer Science and Information Systems</h3>
+          <p>EPSI Paris. Year completed.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+</main>
+
+<section id="contact" class="contact" aria-labelledby="t-contact">
+  <div class="wrap">
+    <div>
+      <h2 id="t-contact">Hiring a developer?</h2>
+      <p>Write or call me to talk about the role. I'll reply with my CV and my availability for an interview.</p>
+    </div>
+    <div class="actions">
+      <a class="btn" href="mailto:richardcedric436@gmail.com?subject=Developer%20position%20%E2%80%93%20getting%20in%20touch">richardcedric436@gmail.com</a>
+      <a class="btn" href="tel:+33758674107">Call +33 7 58 67 41 07</a>
+      <a class="btn ghost" href="CV-Yao-Cedric-Richard-NDRI-EN.pdf" download>Download my CV (PDF)</a>
+      <a class="btn ghost" href="https://github.com/richardcedric436-dev" target="_blank" rel="noopener">My GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Yao Cedric Richard N'DRI</span>
+    <span>Pontoise, France</span>
+  </div>
+</footer>
+
+</body>
+</html>
